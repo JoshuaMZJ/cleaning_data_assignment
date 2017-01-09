@@ -1,0 +1,1 @@
+The main purpose of this script is to take the data from the test and training set and create a tidy data set of the 

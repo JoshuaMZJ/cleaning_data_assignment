@@ -28,5 +28,6 @@ library(reshape)
 	extractedSet<-rawSet[,c(grep(".*std.*|.*mean.*",names(rawSet)),562:563)]
 
 #Create tidy dataset 
-	 meltedExtract<-melt(rawSet,id=c("activity","subject"))
+	 meltedExtract<-melt(extractedSet,id=c("activity","subject"))
 	 tidySet<-cast(meltedExtract, subject + activity ~ variable, mean)
+         write.table(tidySet,"tidy_set.txt", row.names = FALSE)
