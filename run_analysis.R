@@ -1,5 +1,5 @@
 if(!require(library(reshape))){install.packages("reshape")}
-
+library(reshape)
 #Read in header names and factor names for activity.
 	mainheader<-{read.table("features.txt")[2]}
 	activityFactor<-{read.table("activity_labels.txt")[2]}
